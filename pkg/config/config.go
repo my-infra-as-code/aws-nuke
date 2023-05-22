@@ -135,9 +135,9 @@ func (c *Nuke) ValidateAccount(accountID string, aliases []string) error {
 	}
 
 	for _, alias := range aliases {
-		if strings.Contains(strings.ToLower(alias), "prod") {
+		if strings.Contains(strings.ToLower(alias), "foo") {
 			return fmt.Errorf("You are trying to nuke an account with the alias '%s', "+
-				"but it has the substring 'prod' in it. Aborting.", alias)
+				"but it has the substring 'foo' in it. Aborting.", alias)
 		}
 	}
 
